@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORMATION MS — 2026 by RAKOTONIAINA Zo Minah sylvere </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="assets/Images/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ========== LANGUAGE BAR ========== -->
+  <div id="lang-bar">
+    <span data-i18n="lang_label">Langue :</span>
+    <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('mg')">MG</button>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/Images/Logo.png" alt="ASU Logo">
+      ASU Project <span>2026</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero"     data-i18n="nav_home">Accueil</a></li>
+      <li><a href="#download" data-i18n="nav_courses">Cours</a></li>
+      <li><a href="#about"    data-i18n="nav_about">À propos</a></li>
+    </ul>
+    <button class="hamburger" onclick="openMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+    <a href="#hero"     onclick="closeMenu()" data-i18n="nav_home">Accueil</a>
+    <a href="#download" onclick="closeMenu()" data-i18n="nav_courses">Cours</a>
+    <a href="#about"    onclick="closeMenu()" data-i18n="nav_about">À propos</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <!-- Animated background circle -->
+    <div class="hero-circle-bg"></div>
+
+    <div class="hero-inner container">
+
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-graduation-cap"></i>
+          <span data-i18n="badge">ASU · Projet 2026</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_1">FORMATION MS</span><br>
+          <span class="highlight">Word · Excel · PowerPoint</span>
+        </h1>
+        <p class="hero-slogan" data-i18n="slogan">
+          "Aza matahotra hanao diso, satria raha tsy diso ny zavatra iray, tsy ho ainao mihitsy ny hanitsy azy !!"
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">
+            <i class="fas fa-download"></i>
+            <span data-i18n="btn_download">Télécharger les cours</span>
+          </a>
+          <a href="#about" class="btn btn-outline">
+            <i class="fas fa-user"></i>
+            <span data-i18n="btn_about">À propos</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Card -->
+      <div class="hero-profile">
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="assets/Images/profile.jpg" alt="RAKOTONIAINA Zo Minah sylver"
+              onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'placeholder-avatar\'>👤</div>'"/>
+          </div>
+          <p class="profile-name">RAKOTONIAINA Zo Minah sylvere</p>
+          <p class="profile-role" data-i18n="role">Auteur &amp; Formateur</p>
+          <div class="contact-links">
+            <a href="https://wa.me/261333498234" target="_blank" class="contact-link wa">
+              <i class="fab fa-whatsapp fa-lg"></i>
+              <span>+261 33 349 82 34</span>
+            </a>
+            <a href="mailto:rakotoniainazominahsylver@gmail.com" class="contact-link em">
+              <i class="fas fa-envelope fa-lg"></i>
+              <span>rakotoniainazominahsylver@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+      <span data-i18n="scroll">Défiler</span>
+    </div>
+  </section>
+
+  <!-- ========== DOWNLOAD SECTION ========== -->
+  <section id="download">
+    <div class="container">
+      <span class="tag section-tag" data-i18n="section_download_tag">📚 Ressources</span>
+      <h2 class="section-title" data-i18n="section_download_title">Téléchargez vos cours</h2>
+      <p class="section-subtitle" data-i18n="section_download_sub">
+        Cliquez sur le cours que vous souhaitez télécharger.
+      </p>
+
+      <div class="cards-grid">
+
+        <!-- Word Card -->
+        <div class="course-card word fade-in">
+          <div class="card-icon word-icon">
+            <img src="assets/Icons/word.png" alt="Microsoft Word"
+              onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'emoji-icon\'>📝</div>'"/>
+          </div>
+          <span class="card-label word">Microsoft Word</span>
+          <h3 class="card-title" data-i18n="word_title">Formation Word PDF</h3>
+          <p class="card-desc" data-i18n="word_desc">
+            Maîtrisez la mise en page, les styles, les tableaux et la mise en forme professionnelle de documents.
+          </p>
+          <div class="card-meta">
+            <i class="fas fa-file-pdf" style="color:#c43e1c"></i>
+            <span data-i18n="pdf_format">Format PDF</span>
+          </div>
+          <a href="assets/Documents/word.pdf" download class="btn btn-download word">
+            <i class="fas fa-download"></i>
+            <span data-i18n="download_btn">Télécharger</span>
+          </a>
+        </div>
+
+        <!-- Excel Card -->
+        <div class="course-card excel fade-in" style="transition-delay:.12s">
+          <div class="card-icon excel-icon">
+            <img src="assets/Icons/excel.png" alt="Microsoft Excel"
+              onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'emoji-icon\'>📊</div>'"/>
+          </div>
+          <span class="card-label excel">Microsoft Excel</span>
+          <h3 class="card-title" data-i18n="excel_title">Formation Excel PDF</h3>
+          <p class="card-desc" data-i18n="excel_desc">
+            Apprenez les formules, les tableaux croisés dynamiques, la visualisation de données et l'automatisation.
+          </p>
+          <div class="card-meta">
+            <i class="fas fa-file-pdf" style="color:#c43e1c"></i>
+            <span data-i18n="pdf_format">Format PDF</span>
+          </div>
+          <a href="assets/Documents/excel.pdf" download class="btn btn-download excel">
+            <i class="fas fa-download"></i>
+            <span data-i18n="download_btn">Télécharger</span>
+          </a>
+        </div>
+
+        <!-- PowerPoint Card -->
+        <div class="course-card ppt fade-in" style="transition-delay:.24s">
+          <div class="card-icon ppt-icon">
+            <img src="assets/Icons/powerpoint.png" alt="Microsoft PowerPoint"
+              onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'emoji-icon\'>📊</div>'"/>
+          </div>
+          <span class="card-label ppt">Microsoft PowerPoint</span>
+          <h3 class="card-title" data-i18n="ppt_title">Formation PowerPoint PDF</h3>
+          <p class="card-desc" data-i18n="ppt_desc">
+            Créez des présentations percutantes avec des animations, des graphiques et un design professionnel.
+          </p>
+          <div class="card-meta">
+            <i class="fas fa-file-pdf" style="color:#c43e1c"></i>
+            <span data-i18n="pdf_format">Format PDF</span>
+          </div>
+          <a href="assets/Documents/powerpoint.pdf" download class="btn btn-download ppt">
+            <i class="fas fa-download"></i>
+            <span data-i18n="download_btn">Télécharger</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+
+        <!-- Image -->
+        <div class="about-img-wrap fade-in">
+          <div class="about-img-ring">
+            <img src="assets/Images/profile.jpg" alt="RAKOTONIAINA Zo Minah sylver"
+              onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'placeholder-avatar\'>👤</div>'"/>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text fade-in" style="transition-delay:.15s">
+          <span class="tag" style="background:rgba(251,188,5,.15);color:var(--yellow)" data-i18n="about_tag">👤 À propos du formateur</span>
+          <h2 class="section-title">
+            <span data-i18n="about_title">RAKOTONIAINA</span><br>
+            <span class="highlight">Zo Minah sylver</span>
+          </h2>
+
+          <p class="about-desc" data-i18n="about_desc">
+            Formateur professionnel spécialisé dans les outils Microsoft Office, passionné par la transmission du savoir et l'autonomisation des apprenants grâce aux technologies numériques.
+          </p>
+
+          <div class="about-skills">
+            <span class="skill-pill">Microsoft Word</span>
+            <span class="skill-pill">Microsoft Excel</span>
+            <span class="skill-pill">PowerPoint</span>
+            <span class="skill-pill">Microsoft 365</span>
+            <span class="skill-pill">Formation en ligne</span>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-box">
+              <span class="stat-num">3</span>
+              <span class="stat-label" data-i18n="stat_courses">Cours</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">2026</span>
+              <span class="stat-label" data-i18n="stat_year">Promotion</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">ASU</span>
+              <span class="stat-label" data-i18n="stat_project">Projet</span>
+            </div>
+          </div>
+
+          <div class="about-contacts">
+            <a href="https://wa.me/261333498234" target="_blank" class="about-contact-link wa">
+              <i class="fab fa-whatsapp fa-lg"></i>
+              <span>+261 33 349 82 34</span>
+            </a>
+            <a href="mailto:rakotoniainazominahsylver@gmail.com" class="about-contact-link em">
+              <i class="fas fa-envelope fa-lg"></i>
+              <span>rakotoniainazominahsylver@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-left">
+      <img src="assets/Images/Logo.png" alt="ASU Logo" class="footer-logo">
+      <span data-i18n="footer_text">© 2026 ASU | Formation par </span>
+      <strong>RAKOTONIAINA Zo Minah sylver</strong>
+    </div>
+    <div class="footer-right">
+      <a href="https://wa.me/261333498234" target="_blank" class="footer-icon wa" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:rakotoniainazominahsylver@gmail.com" class="footer-icon" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Remonter">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
